@@ -5,13 +5,14 @@ import User from "../models/User.js"
 
 export const createPost = async (req,res) => {
     try {
-      const {userId,description,picturePath}  =req.body;
+      const {userId,description,picturePath,timeEnd}  =req.body;
       const user = await User.findById(userId);
       const newPost = new Post({
         userId,
         pseudo:user.pseudo,
         description,
         picturePath,
+        timeEnd,
         likes:{},
       });
       await newPost.save()
@@ -26,7 +27,7 @@ export const createPost = async (req,res) => {
 export const getFeedPosts = async (req,res) => {
     var currentDate = new Date();
     try {
-        const post = await Post.find({ timeEnd: { $lt: currentDate } });
+        const post = await Post.find({ timeEnd: { $gt: currentDate } });
         res.status(200).json(post);
     } catch (error) {
         res.status(404).json(error.message);
