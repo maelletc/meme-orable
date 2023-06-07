@@ -1,0 +1,93 @@
+/* App.css */
+
+body {
+    background-color: #4247E7;
+  }
+  .container {
+    position: absolute; /* Modifier la valeur de position en relative */  
+  }
+  .info-container {
+    position: relative; /* Modifier la valeur de position en relative */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    top:240px;
+    left:638px;
+    align-items: center; /* Centrer verticalement */
+    text-align: center;
+  }
+
+  .logo{
+    position: absolute;
+    top:-626px;
+    left:-511px; 
+    overflow:hidden;
+  }
+  .text{
+    color:white;
+  }
+  .title{
+    position: relative;
+    text-transform: uppercase;
+    font-size :100px;
+    top:0px;
+    left:0px
+  }
+
+  .text-container {
+    position: relative;
+    display:inline-block;
+    background-color: #3296F1;
+    border-radius: 16px;
+    width:1600px;
+    text-align: justify;
+
+  }
+
+  .subtitle{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 200px;    
+    word-wrap: break-word;
+    font-size :50px;
+
+  }
+  .info{
+    position: relative;
+    margin:50px;
+    font-size :25px;
+  }
+  .deco2{
+    position: absolute;
+    top: 26px; 
+    left: 1567px; 
+    width:567px;
+    height:590px;
+  }
+
+  .rules-container{
+    position: absolute;
+    display : flex;
+    flex-direction: column;
+    border-radius: 16px;
+
+  }
+  .rules{
+    margin:200px;
+    top: 0px; 
+    left: 0px; 
+    position:relative;
+    font-size :20px;
+    text-transform: uppercase;
+  }
+
+.numero{
+  position:relative;
+  top:-500px;
+  margin:25px;
+}
+
+
+  
+  
